@@ -56,6 +56,26 @@ code, div, pre, samp {
     color: #007bff;
     font-weight: bold;
 }
+function copyToClipboard(text, buttonId) {
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById(buttonId);
+        const originalText = btn.innerText;
+        
+        // Visual feedback that it worked
+        btn.innerText = "Copied!";
+        btn.style.backgroundColor = "#4CAF50"; // Optional: turn green
+        
+        // Reset button after 2 seconds
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.style.backgroundColor = ""; 
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+        alert("Transfer failed. Please copy manually.");
+    });
+}
+
 </style>
 <meta charset="UTF-8">
 </head>
@@ -87,8 +107,8 @@ onclick="copyToClipboard('6iVYYivCuAi8tqAXXTjXnPDnG4kYKM69xZWTB4rH4cMr', 'sol-bt
 </div>
 <pre>
 <hr>
-COLD WALLET:
 
+	COLD WALLETS:
 <div class="wallet-box">
     <h3>ETH:</h3>
     <div class="address-container">
