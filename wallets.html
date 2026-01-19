@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>XYLA, INC.</title>
+<style>
+code, div, pre, samp {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "source-code-pro", monospace;
+}
+  body {
+    background-color: black;
+	 color: white;
+  }
+  pre {
+    white-space: pre-wrap;      /* CSS 3 */
+    word-wrap: break-word;      /* IE 5.5+ */
+  }
+	hr {
+    border: none;
+    height: 1px;
+    background-color: white;
+  }
+/* Container for all wallet boxes */
+.reserves-wrapper {
+    display: flex;
+    gap: 8px; /* Control the exact space between the two wallets here */
+}
+
+.wallet-box {
+    gap: 10px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    align-items: left; /* Keeps title and address on one line */
+}
+
+/* Remove the default giant gap above/below the H3 */
+.wallet-box h3 {
+    margin: 0; 
+    font-size: 14px;
+    color: #666;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.address-container {
+    display: flex;
+    align-items: left;
+    gap: 10px;
+}
+
+.explorer-link {
+    font-family: monospace;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+</style>
+<meta charset="UTF-8">
+</head>
+<pre>
+	HOT WALLETS:
+<div class="wallet-box">
+    <h3>ETH:</h3>
+    <div class="address-container">
+        <a href="https://etherscan.io/address/x1yla.eth" target="_blank" class="explorer-link">
+X1YLA.ETH</a>
+<button onclick="copyToClipboard('0x9F9fB571B7318aD7C973C77B9bE7A1d96275c7C1', 'eth-btn')" id="eth-btn">Copy</button>
+    </div>
+
+<div class="address-container">
+        <a href="https://etherscan.io/address/x1yla.base.eth" target="_blank" class="explorer-link">
+X1YLA.BASE.ETH</a>
+<button onclick="copyToClipboard('0xbb1312765fcc720e91d5c5b8ce8d1819fb6d408a', 'eth-btn')" id="eth-btn">Copy</button>
+    </div>
+</div>
+
+<div class="wallet-box">
+    <h3>SOL:</h3>
+    <div class="address-container">
+<a href="https://solscan.io/account/6iVYYivCuAi8tqAXXTjXnPDnG4kYKM69xZWTB4rH4cMr" target="_blank" class="explorer-link">
+EZ2R3.SOL</a>
+<button
+onclick="copyToClipboard('6iVYYivCuAi8tqAXXTjXnPDnG4kYKM69xZWTB4rH4cMr', 'sol-btn')" id="sol-btn">Copy</button>
+    </div>
+</div>
+<pre>
+<hr>
+COLD WALLET:
+
+<div class="wallet-box">
+    <h3>ETH:</h3>
+    <div class="address-container">
+<a href="https://etherscan.io/address/x1yla.eth" target="_blank" class="explorer-link">
+EZ2R3.ETH</a>
+<button onclick="copyToClipboard('YOUR_ETH_ADDRESS', 'eth-btn')" id="eth-btn">Copy</button>
+    </div>
+</div>
+</html>
